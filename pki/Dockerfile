@@ -6,4 +6,6 @@ COPY app /app
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends make && make -C /app
 
+CMD ["/app/lighttpd-run"]
+
 EXPOSE 80
